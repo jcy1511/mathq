@@ -35,31 +35,39 @@ def standard(A):
 
 
     A_s = a1 + "(x"+ p1 + ")^2" + q1        # f(x) = a(x-p)^2 + q
-    print("표준형 : "A_s)
+    print("표준형 : " + A_s)
     print(f"꼭짓점 : ({p},{q})")
 
 
-standard("x^2+-2x+1")
 
 
 def cal(x) :        # 계산해주는 함수
-    return a*(x**2) + b*x + c
+    return a*(float(x)**2) + b*float(x) + c
+
+
 
 
 def maxmin(m,n) :       # m ≤ x ≤ n 일 때 최대최소를 구해주는 함수
     if a > 0 :
-        if m<=p<=n :
+        if float(m)<=p and p<=float(n) :
             min = q
-            if p-m > n-p :
+            if p-float(m) > float(n)-p :
                 max = cal(m)
             else :
                 max = cal(n)
-        elif p < m :
+        elif p < float(m) :
             min = cal(m)
             max = cal(n)
-        elif p < n :
+        elif p < float(n) :
             min = cal(n)
             max = cal(m)
-    print(f"최솟값:{min}, 최댓값:{max}")
+    print(f"최솟값 : {min}, 최댓값 : {max}")
 
-maxmin(-3,1)
+
+
+A = input("f(x)를 입력하시오.")
+B = input("x의 범위를 입력하시오. (예 : m ≤ x ≤ n 이면 m,n 을 입력)")
+m = B[:B.index(",")]
+n = B[B.index(",")+1:]
+standard(A)
+maxmin(m,n)
