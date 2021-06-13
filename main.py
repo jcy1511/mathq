@@ -35,7 +35,7 @@ def standard(A):
 
 
     A_s = a1 + "(x"+ p1 + ")^2" + q1        # f(x) = a(x-p)^2 + q
-    print(A_s)
+    print("표준형 : "A_s)
     print(f"꼭짓점 : ({p},{q})")
 
 
@@ -61,6 +61,5 @@ def maxmin(m,n) :       # m ≤ x ≤ n 일 때 최대최소를 구해주는 함
             min = cal(n)
             max = cal(m)
     print(f"최솟값:{min}, 최댓값:{max}")
-    sf
 
 maxmin(-3,1)
