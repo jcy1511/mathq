@@ -46,7 +46,7 @@ def cal(x) :        # 계산해주는 함수
     return a*(x**2) + b*x + c
 
 
-def maxmin(m,n) :       # m < x < n 일 때 최대최소를 구해주는 함수
+def maxmin(m,n) :       # m ≤ x ≤ n 일 때 최대최소를 구해주는 함수
     if a > 0 :
         if m<=p<=n :
             min = q
@@ -60,3 +60,7 @@ def maxmin(m,n) :       # m < x < n 일 때 최대최소를 구해주는 함수
         elif p < n :
             min = cal(n)
             max = cal(m)
+    print(f"최솟값:{min}, 최댓값:{max}")
+    sf
+
+maxmin(-3,1)
