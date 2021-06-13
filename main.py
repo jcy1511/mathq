@@ -47,7 +47,7 @@ def cal(x) :        # 계산해주는 함수
 
 
 
-def maxmin(m,n) :       # m ≤ x ≤ n 일 때 최대최소를 구해주는 함수
+def maxmin(m,n) :      # m ≤ x ≤ n 일 때 최대최소를 구해주는 함수
     if a > 0 :
         if float(m)<=p and p<=float(n) :
             min = q
