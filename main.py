@@ -61,6 +61,19 @@ def maxmin(m,n) :       # m ≤ x ≤ n 일 때 최대최소를 구해주는 함
         elif p > float(n) :
             min = cal(n)
             max = cal(m)
+    if a < 0 :
+        if float(m)<=p and p<=float(n) :
+            max = q
+            if p-float(m) > float(n)-p :
+                min = cal(m)
+            else :
+                min = cal(n)
+        elif p < float(m) :
+            max = cal(m)
+            min = cal(n)
+        elif p > float(n) :
+            max = cal(n)
+            min = cal(m)
     print(f"최솟값 : {min}, 최댓값 : {max}")
 
 
