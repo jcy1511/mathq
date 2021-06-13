@@ -1,4 +1,4 @@
-def standard(A):
+def standard(A):        # 표준형으로 바꿔주는 함수
     global a
     global b
     global c
